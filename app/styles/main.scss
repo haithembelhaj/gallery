@@ -1,11 +1,11 @@
 @import "compass/reset";
 @import "compass/css3";
 
+@import "../components/taiko-fe-framework/sass/vars/vars";
 @import "../components/taiko-fe-framework/sass/mixins/animation";
 @import "../components/taiko-fe-framework/sass/mixins/common";
 
 @import "../components/taiko-fe-framework/sass/functions/base";
-@import "../components/taiko-fe-framework/sass/vars/vars";
 
 @import "../components/taiko-fe-framework/sass/common/accessibility";
 @import "../components/taiko-fe-framework/sass/common/icons";
@@ -16,3 +16,7 @@
 @import "../components/taiko-fe-framework/sass/common/input";
 @import "../components/taiko-fe-framework/sass/common/res-classes";
 @import "../components/taiko-fe-framework/sass/common/icon-dimensions";
+
+@import "common/vars";
+@import "common/font";
+@import "modules/scene";

@@ -1,0 +1,71 @@
+
+
+.gallery{
+  width: 100%;
+  height: 100%;
+}
+
+
+.scene{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+.wall{
+  background: url(/images/white_wall_hash.png);
+  width: 100%;
+  height: 75%;
+  min-height: 600px;
+  padding-bottom: 80px;
+  @include transform-style(preserve-3d);
+
+  .vp{
+    height: 100%;
+  }
+
+  .vc{
+    width: 100%;
+  }
+
+  .h-center {
+    max-width: 60%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .image-container{
+    display: inline-block;
+    margin: auto;
+
+    img{
+      max-width: 100%;
+      @include box-shadow(0 2px 2px rgba(0,0,0,0.7))
+    }
+
+    p{
+      text-align: right;
+      font-family: $art-font;
+      color: #333;
+      margin: 12px 0 12px 50%;
+      font-size: 12px;
+    }
+  }
+
+
+
+}
+
+.floor{
+  background: url(/images/concrete_wall_2.png);
+  position: relative;
+  width: 100%;
+  height: 60%;
+  top: -20%;
+
+  @include box-shadow(inset 0 8px 8px -9px black);
+  @include rotateX(60deg);
+  @include transform-style(preserve-3d);
+}
