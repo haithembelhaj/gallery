@@ -1,0 +1,19 @@
+
+# ignore node modules an bower components
+node_modules/
+app/components/
+.idea/
+
+.tmp
+.sass-cache
+
+public/components
+public/views
+public/styles
+public/js
+public/images
+public/icons
+
+.DS_Store
+
+npm-debug.log

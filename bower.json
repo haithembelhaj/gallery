@@ -1,0 +1,16 @@
+{
+  "name": "angular-node-seed",
+  "description": "the taiko angular node seed vanilla",
+  "version": "0.0.1",
+  "homepage": "non",
+  "license": "WTF",
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-route": "1.2.x",
+    "taiko-fe-framework": "https://gitlab.taikocloud.com/taikolabs/front-end-framework.git",
+    "lodash": "~2.4.1",
+    "angular-touch": "~1.2.25",
+    "angular-animate": "~1.2.25"
+  }
+}
