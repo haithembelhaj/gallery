@@ -19,21 +19,29 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="gallery">
-        <div class="scene">
-            <div class="wall">
-                <div class="vp"><!--
-                --><div class="vc">
-                        <div class="h-center">
-                            <div class="image-container">
-                                <img src="/images/placeholder.jpg" alt=""/>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eius est excepturi, mollitia odit quia sed.</p>
+    <div class="gallery" ng-controller="Scene as Scene">
+
+        <div class="loader" loader="Scene.progress"></div>
+
+        <div class="scene-container" slider="Scene.actualScene" scenes="Scene.scenes">
+            <div class="scene" ng-repeat="scene in Scene.scenes">
+
+                <div class="wall">
+                    <div class="vp"><!--
+                    --><div class="vc">
+                            <div class="h-center">
+                                <div class="art-container">
+                                    <img ng-if="scene.img" ng-src="/images/{{scene.img}}"/>
+                                    <p>{{scene.text}}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="floor"></div>
+                <div class="left slide-region" ng-mouseenter="Scene.prev()" ng-mouseleave="Scene.cancel()"></div>
+                <div class="right slide-region" ng-mouseenter="Scene.next()" ng-mouseleave="Scene.cancel()"></div>
             </div>
-            <div class="floor"></div>
         </div>
     </div>
 
@@ -47,6 +55,9 @@
     <script src="/components/angular-animate/angular-animate.js"></script>
     <script src="/components/angular-touch/angular-touch.js"></script>
     <script src="/js/app.js"></script>
+    <script src="/js/controllers/scene.js"></script>
+    <script src="/js/directives/slider.js"></script>
+    <script src="/js/directives/loader.js"></script>
     <!-- endbuild -->
   </body>
 </html>
